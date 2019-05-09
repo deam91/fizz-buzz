@@ -6,11 +6,15 @@ import { Observable, of } from 'rxjs';
 })
 export class FizzBuzzService {
 
-  number: number;
+  number: number = 0;
   constructor() { }
 
   getRandomNumberForLoop() {
-    this.number = parseInt(((Math.random()*100)/2).toFixed(0));
+    this.number = parseInt(((Math.random()*1000)/2).toFixed(0));
+    return this.number;
+  }
+
+  getCurrentNumber() {
     return this.number;
   }
 
