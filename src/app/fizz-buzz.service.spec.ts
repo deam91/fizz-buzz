@@ -11,13 +11,12 @@ describe('FizzBuzzService', () => {
   });
 
   let service = new FizzBuzzService();
-  let number = 30
+  let number;
 
 //step two generate the random number
 it(`should get a random number for loop`, () => {
-  // expect(service.getRandomNumberForLoop).not.toBeNaN();
-  // expect(service.getRandomNumberForLoop).toBeGreaterThan(0);
-  // number = service.getRandomNumberForLoop;
+  expect(service.getRandomNumberForLoop).toBeGreaterThan(0);
+  number = service.getRandomNumberForLoop();
 })
 
   //checking if it is divisible by 3.. buzz
@@ -25,10 +24,12 @@ it(`should get a random number for loop`, () => {
     expect(service.isBuzz(number)).toBe(true,`number ${number} is buzz`);
   })
 
+
   //checking if it is divisible by 5.. fizz
   it(`testing if number ${number} is fizz`, () => {
     expect(service.isFizz(number)).toBe(true,`number ${number} is fizz`);
   })
+
 
 });
 
