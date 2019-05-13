@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login'
 import { FacebookLoginProvider, LinkedInLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
-import { AuthComponent } from './auth/auth.component'
+import { AuthComponent } from './auth/auth.component';
+import { AuthLocalComponent } from './auth-local/auth-local.component'
 
 let config = new AuthServiceConfig([
   {
@@ -24,7 +25,7 @@ export function provideConfig() {
 }
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [AuthComponent, AuthLocalComponent],
   imports: [
     CommonModule,
     SocialLoginModule
