@@ -26,12 +26,12 @@ export class AuthComponent implements OnInit {
 
   //pending app id
   loginGoogle() {
-    this.service.signIn(LinkedInLoginProvider.PROVIDER_ID);
+    //this.service.signIn(LinkedInLoginProvider.PROVIDER_ID);
   }
 
   //pending app id
   loginLinkedin() {
-    this.service.signIn(GoogleLoginProvider.PROVIDER_ID);
+    //this.service.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   signOut() {

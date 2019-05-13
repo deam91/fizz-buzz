@@ -10,7 +10,7 @@ export class FizzBuzzService {
   constructor() { }
 
   getRandomNumberForLoop() {
-    this.number = parseInt(((Math.random()*1000)/2).toFixed(0));
+    this.number = parseInt(((Math.random()*50)/2).toFixed(0));
     return this.number;
   }
 

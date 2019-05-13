@@ -1,0 +1,18 @@
+<p>
+  auth works!
+</p>
+<button (click)="loginFacebook()"> login facebook</button>
+<div class="" *ngIf="user">
+  <img src="{{ user.photoUrl }}" >
+  <p><b>Name:</b> {{user.name}}</p>
+  <p><b>Email:</b> {{user.email}}</p>
+</div>
+
+
+<button (click)="logout()"> logout facebook</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
