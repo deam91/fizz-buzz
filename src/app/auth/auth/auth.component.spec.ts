@@ -26,4 +26,17 @@ describe('AuthComponent', () => {
   it('should login facebook', () => {
     expect(component.loginFacebook).toBeTruthy();
   })
+
+  it('should login linkedin', () => {
+    expect(component.loginLinkedin).toBeTruthy();
+  })
+
+  it('should login google', () => {
+    expect(component.loginGoogle).toBeTruthy();
+  })
+
+  it('should signout', () => {
+    expect(component.signOut).toBeTruthy();
+  })
+
 });
