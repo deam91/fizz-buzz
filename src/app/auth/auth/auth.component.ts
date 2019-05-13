@@ -37,5 +37,4 @@ export class AuthComponent implements OnInit {
   signOut() {
     this.service.signOut();
   }
-
 }

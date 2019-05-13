@@ -45,6 +45,4 @@ describe('FizzBuzzService', () => {
       }else return false;
     }).toBe(true,`number ${number} is fizz-buzz`);
   })
-
 });
-

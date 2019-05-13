@@ -25,7 +25,4 @@ export class FizzBuzzService {
   isBuzz(number: number): boolean {
     return number % 3 == 0;
   }
-
-
-
 }

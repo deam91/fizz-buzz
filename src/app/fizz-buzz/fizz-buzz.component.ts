@@ -30,5 +30,4 @@ export class FizzBuzzComponent implements OnInit {
       }
     }
   }
-
 }

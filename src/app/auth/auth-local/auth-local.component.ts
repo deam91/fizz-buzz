@@ -9,7 +9,5 @@ export class AuthLocalComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

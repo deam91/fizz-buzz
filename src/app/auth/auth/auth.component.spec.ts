@@ -38,5 +38,4 @@ describe('AuthComponent', () => {
   it('should signout', () => {
     expect(component.signOut).toBeTruthy();
   })
-
 });
