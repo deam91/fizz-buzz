@@ -3,7 +3,10 @@ import { TestBed } from '@angular/core/testing';
 import { FizzBuzzService } from './fizz-buzz.service';
 
 describe('FizzBuzzService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+  });
 
   it('should be created', () => {
     const service: FizzBuzzService = TestBed.get(FizzBuzzService);
