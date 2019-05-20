@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService, SocialUser, FacebookLoginProvider, LinkedInLoginProvider, GoogleLoginProvider } from 'angularx-social-login'
+import {Component, OnInit} from '@angular/core';
+import {
+  AuthService,
+  SocialUser,
+  FacebookLoginProvider,
+  LinkedInLoginProvider,
+  GoogleLoginProvider
+} from 'angularx-social-login';
 
 @Component({
   selector: 'app-auth',
@@ -8,30 +14,31 @@ import { AuthService, SocialUser, FacebookLoginProvider, LinkedInLoginProvider, 
 })
 export class AuthComponent implements OnInit {
 
-  private user: SocialUser
-  private loggedIn: boolean
+  private user: SocialUser;
+  private loggedIn: boolean;
 
-  constructor(private service: AuthService) { }
+  constructor(private service: AuthService) {
+  }
 
   ngOnInit() {
-    this.service.authState.subscribe( (user) => {
+    this.service.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
-    })
+    });
   }
 
   loginFacebook() {
     this.service.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
-  //pending app id
+  // pending app id
   loginGoogle() {
-    //this.service.signIn(LinkedInLoginProvider.PROVIDER_ID);
+    // this.service.signIn(LinkedInLoginProvider.PROVIDER_ID);
   }
 
-  //pending app id
+  // pending app id
   loginLinkedin() {
-    //this.service.signIn(GoogleLoginProvider.PROVIDER_ID);
+    // this.service.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   signOut() {

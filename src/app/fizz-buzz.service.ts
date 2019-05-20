@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +7,12 @@ import { Observable, of } from 'rxjs';
 export class FizzBuzzService {
 
   number: number = 0;
-  constructor() { }
+
+  constructor() {
+  }
 
   getRandomNumberForLoop() {
-    this.number = parseInt(((Math.random()*50)/2).toFixed(0));
+    this.number = parseInt(((Math.random() * 50) / 2).toFixed(0));
     return this.number;
   }
 
@@ -19,10 +21,15 @@ export class FizzBuzzService {
   }
 
   isFizz(number: number): boolean {
-    return number % 5 == 0;
+    return number % 5 === 0;
   }
 
   isBuzz(number: number): boolean {
-    return number % 3 == 0;
+    return number % 3 === 0;
   }
+
+  isFizzBuzz(number: number): boolean {
+    return number % 3 === 0 && number % 5 === 0;
+  }
+
 }
