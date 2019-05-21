@@ -1,5 +1,6 @@
 {
-  "welcomeMessage": "Thanks for joining, {{ firstName }}! It's great to have you!",
+  "appWelcome": "Está en Fizz-Buzz!",
+  "welcomeMessage": "Módulo de Autenticación",
   "button": {
     "loginFacebook": "Entrar con Facebook!",
     "loginGoogle": "Entrar con Google!"
