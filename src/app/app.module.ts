@@ -9,6 +9,7 @@ import {AuthComponent} from './auth/auth.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { ScheduleItemComponent } from './schedule-item/schedule-item.component';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -43,7 +44,8 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     FizzBuzzComponent,
-    AuthComponent
+    AuthComponent,
+    ScheduleItemComponent
   ],
   imports: [
     BrowserModule,

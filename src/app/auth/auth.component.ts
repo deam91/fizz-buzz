@@ -31,7 +31,7 @@ export class AuthComponent implements OnInit {
     });
 
     // asynchronous - gets translations then completes.
-    this.translate.get(['button.loginFacebook', 'button.loginGoogle'])
+    this.translate.get(['button'])
       .subscribe(translations => {
         this.button.loginFacebook = translations['button.loginFacebook'];
         this.button.loginGoogle = translations['button.loginGoogle'];
