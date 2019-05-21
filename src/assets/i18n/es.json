@@ -1,0 +1,7 @@
+{
+  "welcomeMessage": "Thanks for joining, {{ firstName }}! It's great to have you!",
+  "button": {
+    "loginFacebook": "Entrar con Facebook!",
+    "loginGoogle": "Entrar con Google!"
+  }
+}

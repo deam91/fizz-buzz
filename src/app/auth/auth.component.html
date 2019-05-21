@@ -1,13 +1,16 @@
 <p>
   auth works!
 </p>
-<button (click)="loginFacebook()"> login facebook</button>
+<button (click)="changeLanguage('en')"> EN</button>
+<button (click)="changeLanguage('es')"> ES</button>
+
+<button (click)="loginFacebook()"> {{'button.loginFacebook' | translate}}</button>
+<button (click)="loginGoogle()"> {{'button.loginGoogle' | translate}}</button>
 <div class="" *ngIf="user">
-  <img src="{{ user.photoUrl }}" >
+  <img src="{{ user.photoUrl }}">
   <p><b>Name:</b> {{user.name}}</p>
   <p><b>Email:</b> {{user.email}}</p>
 </div>
-
 
 <button (click)="signOut()"> logout facebook</button>
 <br>
