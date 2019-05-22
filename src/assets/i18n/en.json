@@ -16,6 +16,9 @@
     "location": "Location",
     "descriptionModal": "Description",
     "addBtn": "Add",
-    "appointment": "Schedule appointment"
+    "appointment": "Schedule appointment",
+    "appointmentEdit": "Edit schedule",
+    "edit": "Edit",
+    "delete": "Delete"
   }
 }

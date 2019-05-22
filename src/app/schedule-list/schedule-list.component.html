@@ -12,8 +12,16 @@
             </a>
           </div>
 
-          <div *ngFor="let item of items">
-            <app-schedule-item [value]="item"></app-schedule-item>
+          <div class="" *ngIf="items.length > 0">
+            <div *ngFor="let item of items" (click)="toggleState(item)" [@scheduleState]="item.state" >
+              <button type="button" (click)="editSchedule(item, frameEdit)">
+                <span aria-hidden="true" class="white-text"></span> {{'schedule.edit' | translate}}
+              </button>
+              <button type="button" (click)="deleteSchedule(item)">
+                <span aria-hidden="true" class="white-text"></span> {{'schedule.delete' | translate}}
+              </button>
+              <app-schedule-item [value]="item" ></app-schedule-item>
+            </div>
           </div>
 
           <h2 class="text-uppercase mb-3 mt-5 pt-4">{{'schedule.code' | translate}}</h2>
@@ -80,4 +88,61 @@
     </div>
   </div>
 
+  <div mdbModal #frameEdit="mdbModal" class="modal fade top" id="frameModalTopEdit" tabindex="-1" role="dialog"
+       aria-labelledby="myModalLabel" aria-hidden="true" style="overflow-y: auto">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header text-center">
+          <h4 class="modal-title white-text w-100 font-weight-bold py-2">{{'schedule.appointmentEdit' | translate}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frameEdit.hide()">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+          <input type="hidden" class="form-control" mdbInputDirective [formControl]="idInputEdit"
+                 required >
+          <div class="md-form mb-5">
+            <mdb-icon far icon="clock" class="prefix blue-text"></mdb-icon>
+            <input type="text" id="form1Edit" class="form-control" mdbInputDirective [formControl]="timeInputEdit"
+                   required >
+            <label data-error="wrong" data-success="right" for="form1Edit">{{'schedule.time' | translate}}</label>
+          </div>
+
+          <div class="md-form">
+            <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
+            <input type="email" id="form2Edit" class="form-control" mdbInputDirective [formControl]="subjectInputEdit"
+                   required >
+            <label data-error="wrong" data-success="right" for="form2Edit">{{'schedule.subject' | translate}}</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <mdb-icon far icon="map" class="prefix grey-text"></mdb-icon>
+            <input type="text" id="form3Edit" class="form-control" mdbInputDirective [formControl]="locationInputEdit" >
+            <label data-error="wrong" data-success="right" for="form3Edit">{{'schedule.location' | translate}} </label>
+          </div>
+
+          <div class="md-form">
+            <mdb-icon far icon="edit" class="prefix grey-text"></mdb-icon>
+            <input type="email" id="form4Edit" class="form-control" mdbInputDirective
+                   [formControl]="descriptionInputEdit" >
+            <label data-error="wrong" data-success="right" for="form4Edit">{{'schedule.descriptionModal' | translate}} </label>
+          </div>
+
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="button" mdbBtn color="info" class="waves-effect" (click)="saveEditSchedule(frameEdit)"
+                  mdbWavesEffect [disabled]="timeInputEdit.errors || subjectInputEdit.errors">{{'schedule.edit' | translate}}
+          </button>
+        </div>
+
+        <!--Footer-->
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
 </main>

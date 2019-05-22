@@ -13,9 +13,12 @@
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "time": "Tiempo*",
     "subject": "Asunto*",
-    "location": "Localización*",
+    "location": "Localización",
     "descriptionModal": "Descripción",
     "addBtn": "Agregar",
-    "appointment": "Citas programadas"
+    "appointment": "Citas programadas",
+    "appointmentEdit": "Edit schedule",
+    "edit": "Editar",
+    "delete": "Borrar"
   }
 }
