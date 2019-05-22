@@ -31,11 +31,11 @@ const googleLoginOptions: LoginOpt = {
 const config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('1944838925620726', fbLoginOptions)
+    provider: new FacebookLoginProvider('Facebook app id', fbLoginOptions)
   },
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('1944838925620726', googleLoginOptions)
+    provider: new GoogleLoginProvider('Google App Id', googleLoginOptions)
   }
 ]);
 
