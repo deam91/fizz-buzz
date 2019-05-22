@@ -4,5 +4,17 @@
   "button": {
     "loginFacebook": "Entrar con Facebook!",
     "loginGoogle": "Entrar con Google!"
+  },
+  "schedule": {
+    "title": "Programación",
+    "description": "Debajo puede encontrar la programación de su día",
+    "addEvent": "Agregar evento",
+    "code": "Código de conducta",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "time": "Tiempo*",
+    "subject": "Asunto*",
+    "location": "Localización*",
+    "descriptionModal": "Descripción",
+    "addBtn": "Agregar"
   }
 }

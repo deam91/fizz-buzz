@@ -14,9 +14,8 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class AuthComponent implements OnInit {
 
-  private user: SocialUser;
+  user: SocialUser;
   private loggedIn: boolean;
-  private button: { loginFacebook: string, loginGoogle: string };
 
   constructor(private service: AuthService, private translate: TranslateService) {
     translate.addLangs(['en', 'es']);
@@ -29,13 +28,6 @@ export class AuthComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
     });
-
-    // asynchronous - gets translations then completes.
-    this.translate.get(['button'])
-      .subscribe(translations => {
-        this.button.loginFacebook = translations['button.loginFacebook'];
-        this.button.loginGoogle = translations['button.loginGoogle'];
-      });
   }
 
   loginFacebook() {

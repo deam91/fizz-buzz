@@ -4,5 +4,17 @@
   "button": {
     "loginFacebook": "Signin with Facebook!",
     "loginGoogle": "Signin with Google!"
+  },
+  "schedule": {
+    "title": "SCHEDULES",
+    "description": "Below you can find a schedule of your day.",
+    "addEvent": "Add event",
+    "code": "Code of conduct",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "time": "Time*",
+    "subject": "Subject*",
+    "location": "Location",
+    "descriptionModal": "Description",
+    "addBtn": "Add"
   }
 }

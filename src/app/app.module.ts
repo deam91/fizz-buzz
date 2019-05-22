@@ -10,6 +10,13 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { ScheduleItemComponent } from './schedule-item/schedule-item.component';
+import { ScheduleListComponent } from './schedule-list/schedule-list.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import {AuthLocalComponent} from "./auth-local/auth-local.component";
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -45,10 +52,16 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     FizzBuzzComponent,
     AuthComponent,
-    ScheduleItemComponent
+    AuthLocalComponent,
+    ScheduleItemComponent,
+    ScheduleListComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     SocialLoginModule,
     HttpClientModule,
@@ -58,7 +71,8 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{
     provide: AuthServiceConfig,
