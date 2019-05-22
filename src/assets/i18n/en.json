@@ -15,6 +15,7 @@
     "subject": "Subject*",
     "location": "Location",
     "descriptionModal": "Description",
-    "addBtn": "Add"
+    "addBtn": "Add",
+    "appointment": "Schedule appointment"
   }
 }

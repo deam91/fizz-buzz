@@ -15,6 +15,7 @@
     "subject": "Asunto*",
     "location": "Localización*",
     "descriptionModal": "Descripción",
-    "addBtn": "Agregar"
+    "addBtn": "Agregar",
+    "appointment": "Citas programadas"
   }
 }
