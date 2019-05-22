@@ -16,7 +16,7 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import {AuthLocalComponent} from "./auth-local/auth-local.component";
+import {AuthLocalComponent} from './auth-local/auth-local.component';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
